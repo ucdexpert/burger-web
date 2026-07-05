@@ -4,6 +4,7 @@ import { useEffect, useMemo, useRef, Suspense } from "react";
 import { Canvas, useFrame } from "@react-three/fiber";
 import { Float, OrbitControls, PerspectiveCamera, useGLTF } from "@react-three/drei";
 import * as THREE from "three";
+import { LazyCanvas } from "./LazyCanvas";
 
 const BurgerModel = () => {
   const groupRef = useRef<THREE.Group>(null);
@@ -70,7 +71,7 @@ const BurgerModel = () => {
 
 export const BurgerScrollScene = () => {
   return (
-    <div className="h-full w-full">
+    <LazyCanvas className="h-full w-full">
       <Canvas camera={{ position: [0, 0.2, 5.5], fov: 40 }} shadows className="w-full h-full">
         <PerspectiveCamera makeDefault position={[0, 0.2, 5.5]} />
         <ambientLight intensity={0.65} />
@@ -87,6 +88,6 @@ export const BurgerScrollScene = () => {
         </Suspense>
         <OrbitControls enableZoom={false} enablePan={false} minDistance={3.5} maxDistance={7} />
       </Canvas>
-    </div>
+    </LazyCanvas>
   );
 };

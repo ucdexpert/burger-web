@@ -2,6 +2,7 @@
 
 import { useState, useEffect, lazy, Suspense } from "react";
 import { motion } from "framer-motion";
+import { LazyCanvas } from "./LazyCanvas";
 
 const Hero3DScene = lazy(() => import("./Hero3DScene"));
 
@@ -135,9 +136,11 @@ export const Hero = () => {
               <div className="absolute inset-0 rounded-[2.5rem] bg-[radial-gradient(circle_at_top,rgba(255,255,255,0.08),transparent_65%)]" />
               <div className="absolute inset-3 rounded-[1.75rem] border border-white/[0.03] bg-transparent" />
               <div className="relative z-10 h-full w-full overflow-hidden rounded-[1.75rem]">
-                <Suspense fallback={null}>
-                  <Hero3DScene />
-                </Suspense>
+                <LazyCanvas className="h-full w-full">
+                  <Suspense fallback={null}>
+                    <Hero3DScene />
+                  </Suspense>
+                </LazyCanvas>
               </div>
             </div>
           </motion.div>
