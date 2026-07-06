@@ -42,13 +42,29 @@ export const ContactPageContent = () => {
               <p className="mt-3 text-gray-400">Experience handcrafted burgers in our elegant dining atmosphere.</p>
               <div className="mt-8 flex flex-wrap gap-4">
                 <a
-                  href="https://wa.me/1234567890?text=I%20would%20like%20to%20reserve%20a%20table!"
+                  href="https://wa.me/3170219387?text=I%20would%20like%20to%20reserve%20a%20table!"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="rounded-full bg-linear-to-r from-orange-500 to-yellow-500 px-8 py-4 text-sm font-semibold text-black transition-all duration-300 hover:scale-[1.02] hover:shadow-[0_0_35px_rgba(249,115,62,0.35)]"
                 >
-                  Reserve Now
+                  Reserve via WhatsApp
                 </a>
+              </div>
+            </motion.div>
+
+            {/* Email Contact */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.25 }}
+              className="rounded-[2.5rem] border border-white/10 bg-white/5 p-8 backdrop-blur-sm"
+            >
+              <div className="flex items-start gap-4">
+                <Mail className="mt-1 h-5 w-5 text-orange-400" />
+                <div>
+                  <h3 className="font-semibold text-white">Email</h3>
+                  <a href="mailto:hk202504@gmail.com" className="text-sm text-gray-400 mt-1 hover:text-orange-400 transition">hk202504@gmail.com</a>
+                </div>
               </div>
             </motion.div>
 

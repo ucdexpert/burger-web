@@ -24,6 +24,14 @@ export const metadata: Metadata = {
     description: "Experience the ultimate burger experience with our premium gourmet burgers.",
     url: "https://theburgerhouse.com",
     siteName: "The Burger House",
+    images: [
+      {
+        url: "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=1200&h=630&fit=crop&q=80",
+        width: 1200,
+        height: 630,
+        alt: "The Burger House - Luxury Gourmet Burgers",
+      },
+    ],
     type: "website",
     locale: "en_US",
   },
@@ -31,6 +39,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "The Burger House | Luxury Gourmet Burgers",
     description: "Premium burgers and an unforgettable dining experience.",
+    images: ["https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=1200&h=630&fit=crop&q=80"],
   },
   robots: {
     index: true,

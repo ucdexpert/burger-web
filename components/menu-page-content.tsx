@@ -71,7 +71,7 @@ export const MenuPageContent = () => {
                       <Star className="h-4 w-4 fill-current" /> {item.rating.toFixed(1)}
                     </span>
                     <a
-                      href="https://wa.me/1234567890"
+                      href="https://wa.me/3170219387"
                       target="_blank"
                       rel="noreferrer"
                       className="rounded-full border border-orange-500/30 px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-orange-500 hover:text-black"
@@ -96,7 +96,7 @@ export const MenuPageContent = () => {
           <p className="mt-4 text-gray-400">Reserve your table today for a truly elevated dining experience.</p>
           <div className="mt-8">
             <a
-              href="https://wa.me/1234567890"
+              href="https://wa.me/3170219387"
               target="_blank"
               rel="noopener noreferrer"
               className="rounded-full bg-linear-to-r from-orange-500 to-yellow-500 px-10 py-4 font-semibold text-black transition hover:scale-[1.02]"

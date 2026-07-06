@@ -59,7 +59,7 @@ export const AboutPageContent = () => {
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mb-16 text-center">
             <h2 className="text-3xl font-semibold text-white">Our Culinary Philosophy</h2>
-            <p className="mt-4 text-gray-400 max-w-2xl mx-auto">It's not just about the beef—it's about the harmony of textures, flavors, and the artistry in every assembly.</p>
+            <p className="mt-4 text-gray-400 max-w-2xl mx-auto">It&apos;s not just about the beef—it&apos;s about the harmony of textures, flavors, and the artistry in every assembly.</p>
           </div>
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
             {[
@@ -91,7 +91,7 @@ export const AboutPageContent = () => {
             <h2 className="text-3xl font-semibold text-white">Ready to experience our signature menu?</h2>
             <div className="mt-10 flex flex-wrap justify-center gap-4">
               <a href="/menu" className="rounded-full border border-white/20 bg-white/10 px-8 py-4 text-sm font-semibold text-white transition hover:bg-white/20">Explore Menu</a>
-              <a href="https://wa.me/1234567890" className="rounded-full bg-linear-to-r from-orange-500 to-yellow-500 px-8 py-4 text-sm font-semibold text-black transition hover:scale-[1.02]">Reserve Table</a>
+              <a href="https://wa.me/3170219387" className="rounded-full bg-linear-to-r from-orange-500 to-yellow-500 px-8 py-4 text-sm font-semibold text-black transition hover:scale-[1.02]">Reserve Table</a>
             </div>
           </div>
         </div>

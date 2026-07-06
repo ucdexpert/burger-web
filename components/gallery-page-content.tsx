@@ -112,7 +112,7 @@ export const GalleryPageContent = () => {
           </p>
           <div className="mt-8">
             <a
-              href="https://wa.me/1234567890?text=I%20would%20like%20to%20book%20a%20table!"
+              href="https://wa.me/3170219387?text=I%20would%20like%20to%20book%20a%20table!"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex rounded-full bg-linear-to-r from-orange-500 to-yellow-500 px-10 py-4 text-center text-sm font-semibold text-black transition-all duration-300 hover:scale-[1.02] hover:shadow-[0_0_35px_rgba(249,115,62,0.35)]"

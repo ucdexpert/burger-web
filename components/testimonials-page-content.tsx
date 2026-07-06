@@ -136,7 +136,7 @@ export const TestimonialsPageContent = () => {
           <h2 className="text-3xl font-semibold text-white">Ready to experience why guests keep coming back?</h2>
           <div className="mt-10 flex flex-wrap justify-center gap-4">
             <a href="/menu" className="rounded-full border border-white/20 bg-white/10 px-8 py-4 text-sm font-semibold text-white transition hover:bg-white/20">Explore Menu</a>
-            <a href="https://wa.me/1234567890" className="rounded-full bg-linear-to-r from-orange-500 to-yellow-500 px-8 py-4 text-sm font-semibold text-black transition hover:scale-[1.02]">Reserve Table</a>
+            <a href="https://wa.me/3170219387" className="rounded-full bg-linear-to-r from-orange-500 to-yellow-500 px-8 py-4 text-sm font-semibold text-black transition hover:scale-[1.02]">Reserve Table</a>
           </div>
         </motion.div>
       </div>

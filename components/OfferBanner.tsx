@@ -32,21 +32,24 @@ export const OfferBanner = () => {
   const [isMounted, setIsMounted] = useState(false);
 
   useEffect(() => {
-    setIsMounted(true);
+    const handle = requestAnimationFrame(() => {
+      setIsMounted(true);
+    });
 
     const timer = window.setInterval(() => {
       setTimeLeft(getTimeLeft(targetTime));
     }, 1000);
 
-    return () => window.clearInterval(timer);
+    return () => {
+      cancelAnimationFrame(handle);
+      window.clearInterval(timer);
+    };
   }, [targetTime]);
 
   const timerVariants = {
     initial: { opacity: 0, scale: 0.8 },
     animate: { opacity: 1, scale: 1 },
   };
-
-  if (!isMounted) return null;
 
   return (
     <section className="bg-[#0b0b0b] pt-8 pb-10 sm:pt-8 sm:pb-12">
@@ -82,22 +85,22 @@ export const OfferBanner = () => {
 
               <div className="flex items-center gap-2 text-white sm:gap-3">
                 <div className="flex min-w-17 flex-col items-center rounded-2xl border border-white/10 bg-white/10 px-3 py-3">
-                  <motion.span key={'hours-' + timeLeft.hours} variants={timerVariants} initial="initial" animate="animate" className="text-2xl font-semibold text-orange-300 sm:text-3xl">
-                    {String(timeLeft.hours).padStart(2, "0")}
+                  <motion.span key={isMounted ? 'hours-' + timeLeft.hours : 'hours-placeholder'} variants={timerVariants} initial="initial" animate="animate" className="text-2xl font-semibold text-orange-300 sm:text-3xl">
+                    {isMounted ? String(timeLeft.hours).padStart(2, "0") : "00"}
                   </motion.span>
                   <span className="text-[0.65rem] uppercase tracking-[0.25em] text-gray-400">Hours</span>
                 </div>
                 <span className="text-2xl text-gray-500">:</span>
                 <div className="flex min-w-17 flex-col items-center rounded-2xl border border-white/10 bg-white/10 px-3 py-3">
-                  <motion.span key={'minutes-' + timeLeft.minutes} variants={timerVariants} initial="initial" animate="animate" className="text-2xl font-semibold text-orange-300 sm:text-3xl">
-                    {String(timeLeft.minutes).padStart(2, "0")}
+                  <motion.span key={isMounted ? 'minutes-' + timeLeft.minutes : 'minutes-placeholder'} variants={timerVariants} initial="initial" animate="animate" className="text-2xl font-semibold text-orange-300 sm:text-3xl">
+                    {isMounted ? String(timeLeft.minutes).padStart(2, "0") : "00"}
                   </motion.span>
                   <span className="text-[0.65rem] uppercase tracking-[0.25em] text-gray-400">Minutes</span>
                 </div>
                 <span className="text-2xl text-gray-500">:</span>
                 <div className="flex min-w-17 flex-col items-center rounded-2xl border border-white/10 bg-white/10 px-3 py-3">
-                  <motion.span key={'seconds-' + timeLeft.seconds} variants={timerVariants} initial="initial" animate="animate" className="text-2xl font-semibold text-orange-300 sm:text-3xl">
-                    {String(timeLeft.seconds).padStart(2, "0")}
+                  <motion.span key={isMounted ? 'seconds-' + timeLeft.seconds : 'seconds-placeholder'} variants={timerVariants} initial="initial" animate="animate" className="text-2xl font-semibold text-orange-300 sm:text-3xl">
+                    {isMounted ? String(timeLeft.seconds).padStart(2, "0") : "00"}
                   </motion.span>
                   <span className="text-[0.65rem] uppercase tracking-[0.25em] text-gray-400">Seconds</span>
                 </div>

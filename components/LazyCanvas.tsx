@@ -2,7 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 
-export const LazyCanvas = ({ children, className }: { children: React.ReactNode, className?: string }) => {
+export const LazyCanvas = ({ children, className, aspectRatio = "1/1" }: { children: React.ReactNode, className?: string, aspectRatio?: string }) => {
   const [isVisible, setIsVisible] = useState(false);
   const ref = useRef<HTMLDivElement>(null);
 
@@ -25,7 +25,7 @@ export const LazyCanvas = ({ children, className }: { children: React.ReactNode,
   }, []);
 
   return (
-    <div ref={ref} className={className}>
+    <div ref={ref} className={className} style={{ aspectRatio }}>
       {isVisible ? children : <div className="h-full w-full bg-black/50" />}
     </div>
   );

@@ -31,32 +31,33 @@ export const Hero = () => {
   const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
-    setIsMounted(true);
+    const handle = requestAnimationFrame(() => {
+      setIsMounted(true);
+    });
 
     const mediaQuery = window.matchMedia("(max-width: 768px)");
     const update = () => setIsMobile(mediaQuery.matches);
     update();
     mediaQuery.addEventListener("change", update);
 
-    return () => mediaQuery.removeEventListener("change", update);
+    return () => {
+      cancelAnimationFrame(handle);
+      mediaQuery.removeEventListener("change", update);
+    };
   }, []);
-
-  if (!isMounted) return null;
-
-  const particleCount = isMobile ? 4 : 10;
 
   return (
     <section id="hero" className="relative isolate flex min-h-[calc(100dvh-4.5rem)] items-center overflow-hidden bg-[#040404]">
       <div className="pointer-events-none absolute inset-0 overflow-hidden">
-        <div className={`hero-soft-glow absolute left-[-8%] top-[-8%] h-104 w-104 rounded-full bg-orange-500/25 blur-[140px] ${isMobile ? "hidden sm:block" : "block"}`} />
-        <div className={`hero-soft-glow absolute bottom-[-6%] right-[-4%] h-96 w-96 rounded-full bg-yellow-500/20 blur-[140px] ${isMobile ? "hidden sm:block" : "block"}`} />
-        <div className={`hero-cinematic-ring absolute right-[6%] top-1/2 h-136 w-136 -translate-y-1/2 rounded-full border border-white/10 ${isMobile ? "hidden sm:block" : "block"}`} />
+        <div className="hero-soft-glow absolute left-[-8%] top-[-8%] h-104 w-104 rounded-full bg-orange-500/25 blur-[140px] hidden md:block" />
+        <div className="hero-soft-glow absolute bottom-[-6%] right-[-4%] h-96 w-96 rounded-full bg-yellow-500/20 blur-[140px] hidden md:block" />
+        <div className="hero-cinematic-ring absolute right-[6%] top-1/2 h-136 w-136 -translate-y-1/2 rounded-full border border-white/10 hidden md:block" />
         <div className="hero-grid-overlay absolute inset-0 opacity-40" style={{ backgroundImage: "radial-gradient(rgba(255,255,255,0.08) 1px, transparent 1px)", backgroundSize: "24px 24px" }} />
       </div>
 
-      {!isMobile && (
+      {isMounted && !isMobile && (
         <div className="hero-particles pointer-events-none absolute inset-0">
-          {[...Array(particleCount)].map((_, i) => (
+          {[...Array(10)].map((_, i) => (
             <Particle key={i} delay={i * 0.3} />
           ))}
         </div>
@@ -110,7 +111,7 @@ export const Hero = () => {
               transition={{ duration: 0.8, delay: 0.6 }}
             >
               <a
-                href="https://wa.me/1234567890?text=I%20want%20to%20order%20now!"
+                href="https://wa.me/3170219387?text=I%20want%20to%20order%20now!"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="rounded-full bg-linear-to-r from-orange-500 to-yellow-500 px-8 py-4 text-center text-sm font-semibold text-black transition-all duration-300 hover:scale-[1.02] hover:shadow-[0_0_35px_rgba(249,115,62,0.35)]"
@@ -136,7 +137,7 @@ export const Hero = () => {
               <div className="absolute inset-0 rounded-[2.5rem] bg-[radial-gradient(circle_at_top,rgba(255,255,255,0.08),transparent_65%)]" />
               <div className="absolute inset-3 rounded-[1.75rem] border border-white/[0.03] bg-transparent" />
               <div className="relative z-10 h-full w-full overflow-hidden rounded-[1.75rem]">
-                <LazyCanvas className="h-full w-full">
+                <LazyCanvas className="h-full w-full" aspectRatio="4/3">
                   <Suspense fallback={null}>
                     <Hero3DScene />
                   </Suspense>

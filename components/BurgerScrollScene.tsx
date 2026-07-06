@@ -71,7 +71,7 @@ const BurgerModel = () => {
 
 export const BurgerScrollScene = () => {
   return (
-    <LazyCanvas className="h-full w-full">
+    <LazyCanvas className="h-full w-full" aspectRatio="1/1">
       <Canvas camera={{ position: [0, 0.2, 5.5], fov: 40 }} shadows className="w-full h-full">
         <PerspectiveCamera makeDefault position={[0, 0.2, 5.5]} />
         <ambientLight intensity={0.65} />

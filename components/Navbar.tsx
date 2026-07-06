@@ -72,7 +72,7 @@ export const Navbar = () => {
         </nav>
 
         <a
-          href="https://wa.me/1234567890?text=I%20want%20to%20order%20now!"
+          href="https://wa.me/3170219387?text=I%20want%20to%20order%20now!"
           target="_blank"
           rel="noopener noreferrer"
           className="hidden rounded-full border border-orange-400/25 bg-linear-to-r from-orange-500 to-yellow-500 px-4 py-2 text-sm font-semibold text-black shadow-[0_10px_30px_rgba(249,115,22,0.25)] transition-all duration-300 hover:scale-[1.02] hover:shadow-[0_12px_35px_rgba(249,115,22,0.35)] lg:inline-flex"

@@ -1,8 +1,8 @@
 "use client";
 
 import Link from "next/link";
-import { BadgeCheck, Camera, MessageCircleMore, Send, Sparkles, ArrowRight } from "lucide-react";
 import { motion } from "framer-motion";
+import { Globe, MessageCircle, Send, Sparkles, ArrowRight } from "lucide-react";
 
 const quickLinks = [
   { href: "/", label: "Home" },
@@ -14,9 +14,10 @@ const quickLinks = [
 ];
 
 const socials = [
-  { href: "https://instagram.com", label: "Instagram", icon: Camera },
-  { href: "https://facebook.com", label: "Facebook", icon: BadgeCheck },
-  { href: "https://wa.me/1234567890", label: "WhatsApp", icon: MessageCircleMore },
+  { href: "https://www.linkedin.com/in/muhammad-uzair-066733314", label: "LinkedIn", icon: Globe },
+  { href: "https://www.facebook.com/uzairkhilji.uzairkhilji", label: "Facebook", icon: Globe },
+  { href: "https://github.com/muhammaduzair56", label: "GitHub", icon: Globe },
+  { href: "https://wa.me/3170219387", label: "WhatsApp", icon: MessageCircle },
 ];
 
 export const Footer = () => {
@@ -35,7 +36,7 @@ export const Footer = () => {
             <p className="mt-4 text-gray-400">Reserve your table today and enjoy handcrafted burgers in a refined atmosphere.</p>
             <div className="mt-8">
               <a
-                href="https://wa.me/1234567890?text=I%20would%20like%20to%20reserve%20a%20table!"
+                href="https://wa.me/3170219387?text=I%20would%20like%20to%20reserve%20a%20table!"
                 className="inline-flex items-center gap-2 rounded-full bg-linear-to-r from-orange-500 to-yellow-500 px-10 py-4 font-semibold text-black transition hover:scale-[1.02] hover:shadow-[0_0_25px_rgba(249,115,62,0.3)]"
               >
                 Reserve Now <ArrowRight className="h-4 w-4" />
