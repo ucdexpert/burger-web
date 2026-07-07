@@ -47,7 +47,7 @@ export const Hero = () => {
   }, []);
 
   return (
-    <section id="hero" className="relative isolate flex min-h-[calc(100dvh-4.5rem)] items-center overflow-hidden bg-[#040404]">
+    <section id="hero" className="relative isolate flex min-h-screen lg:min-h-[calc(100dvh-4.5rem)] items-center overflow-hidden bg-[#040404]">
       <div className="pointer-events-none absolute inset-0 overflow-hidden">
         <div className="hero-soft-glow absolute left-[-8%] top-[-8%] h-104 w-104 rounded-full bg-orange-500/25 blur-[140px] hidden md:block" />
         <div className="hero-soft-glow absolute bottom-[-6%] right-[-4%] h-96 w-96 rounded-full bg-yellow-500/20 blur-[140px] hidden md:block" />
@@ -133,7 +133,7 @@ export const Hero = () => {
             transition={{ duration: 0.9, ease: "easeOut", delay: 0.2 }}
             className="relative flex items-center justify-center lg:justify-end"
           >
-            <div className="hero-panel relative h-[22rem] w-full max-w-[40rem] rounded-[2.5rem] border border-white/[0.06] bg-linear-to-br from-orange-500/[0.06] via-transparent to-yellow-500/[0.04] p-3 shadow-[0_14px_40px_rgba(0,0,0,0.2)] backdrop-blur-2xl sm:h-[26rem] md:max-w-145 md:h-[28rem] lg:h-[34rem] lg:w-160">
+            <div className="hero-panel relative h-[22rem] w-full max-w-[40rem] rounded-[2.5rem] border border-white/[0.06] bg-linear-to-br from-orange-500/[0.06] via-transparent to-yellow-500/[0.04] p-3 shadow-[0_14px_40px_rgba(0,0,0,0.2)] backdrop-blur-2xl sm:h-[25rem] md:max-w-145 md:h-[28rem] lg:h-[34rem] lg:w-160">
               <div className="absolute inset-0 rounded-[2.5rem] bg-[radial-gradient(circle_at_top,rgba(255,255,255,0.08),transparent_65%)]" />
               <div className="absolute inset-3 rounded-[1.75rem] border border-white/[0.03] bg-transparent" />
               <div className="relative z-10 h-full w-full overflow-hidden rounded-[1.75rem]">

@@ -83,22 +83,22 @@ export const OfferBanner = () => {
                 Offer ends in
               </div>
 
-              <div className="flex flex-wrap items-center justify-center gap-2 text-white sm:gap-3">
-                <div className="flex w-full max-w-[9rem] flex-col items-center rounded-2xl border border-white/10 bg-white/10 px-3 py-3 sm:w-auto sm:flex-none">
+              <div className="flex flex-wrap items-center justify-center gap-3 text-white">
+                <div className="flex min-w-0 w-full flex-1 flex-col items-center rounded-2xl border border-white/10 bg-white/10 px-3 py-3 sm:w-auto sm:flex-none">
                   <motion.span key={isMounted ? 'hours-' + timeLeft.hours : 'hours-placeholder'} variants={timerVariants} initial="initial" animate="animate" className="text-2xl font-semibold text-orange-300 sm:text-3xl">
                     {isMounted ? String(timeLeft.hours).padStart(2, "0") : "00"}
                   </motion.span>
                   <span className="text-[0.65rem] uppercase tracking-[0.25em] text-gray-400">Hours</span>
                 </div>
                 <span className="text-2xl text-gray-500 hidden sm:block">:</span>
-                <div className="flex w-full max-w-[9rem] flex-col items-center rounded-2xl border border-white/10 bg-white/10 px-3 py-3 sm:w-auto sm:flex-none">
+                <div className="flex min-w-0 w-full flex-1 flex-col items-center rounded-2xl border border-white/10 bg-white/10 px-3 py-3 sm:w-auto sm:flex-none">
                   <motion.span key={isMounted ? 'minutes-' + timeLeft.minutes : 'minutes-placeholder'} variants={timerVariants} initial="initial" animate="animate" className="text-2xl font-semibold text-orange-300 sm:text-3xl">
                     {isMounted ? String(timeLeft.minutes).padStart(2, "0") : "00"}
                   </motion.span>
                   <span className="text-[0.65rem] uppercase tracking-[0.25em] text-gray-400">Minutes</span>
                 </div>
                 <span className="text-2xl text-gray-500 hidden sm:block">:</span>
-                <div className="flex w-full max-w-[9rem] flex-col items-center rounded-2xl border border-white/10 bg-white/10 px-3 py-3 sm:w-auto sm:flex-none">
+                <div className="flex min-w-0 w-full flex-1 flex-col items-center rounded-2xl border border-white/10 bg-white/10 px-3 py-3 sm:w-auto sm:flex-none">
                   <motion.span key={isMounted ? 'seconds-' + timeLeft.seconds : 'seconds-placeholder'} variants={timerVariants} initial="initial" animate="animate" className="text-2xl font-semibold text-orange-300 sm:text-3xl">
                     {isMounted ? String(timeLeft.seconds).padStart(2, "0") : "00"}
                   </motion.span>

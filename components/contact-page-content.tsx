@@ -5,7 +5,7 @@ import { ArrowRight, Clock3, MapPin, PhoneCall, Mail, Sparkles, Navigation } fro
 
 export const ContactPageContent = () => {
   return (
-    <section className="relative min-h-[calc(100dvh-4.5rem)] bg-[#040404] py-16 sm:py-24">
+    <section className="relative min-h-screen lg:min-h-[calc(100dvh-4.5rem)] bg-[#040404] py-16 sm:py-24">
       {/* Background Ambience */}
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(249,115,22,0.15),transparent_40%),radial-gradient(circle_at_bottom_left,rgba(251,191,36,0.1),transparent_30%)]" />
 
