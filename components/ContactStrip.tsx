@@ -33,7 +33,7 @@ export const ContactStrip = () => {
           </p>
         </motion.div>
 
-        <div className="grid gap-6 lg:grid-cols-[1.05fr_0.95fr_1fr]">
+        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-[1.05fr_0.95fr_1fr]">
           <motion.div
             className="rounded-4xl border border-white/10 bg-white/8 p-7 shadow-[0_20px_70px_rgba(0,0,0,0.2)] backdrop-blur-xl"
             variants={cardVariants}

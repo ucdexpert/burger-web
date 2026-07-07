@@ -63,7 +63,7 @@ export const OfferBanner = () => {
         >
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom_right,rgba(251,191,36,0.16),transparent_30%)]" />
 
-          <div className="relative z-10 flex flex-col gap-8 lg:flex-row lg:items-end lg:justify-between">
+          <div className="relative z-10 flex w-full flex-col gap-8 lg:flex-row lg:items-end lg:justify-between">
             <div className="max-w-2xl space-y-4">
               <div className="inline-flex items-center gap-2 rounded-full border border-orange-400/30 bg-orange-500/10 px-4 py-2 text-[0.7rem] font-semibold uppercase tracking-[0.35em] text-orange-200">
                 <Sparkles className="h-3.5 w-3.5" />
@@ -77,28 +77,28 @@ export const OfferBanner = () => {
               </p>
             </div>
 
-            <div className="flex flex-col gap-4 rounded-3xl border border-white/10 bg-black/30 p-5 shadow-[0_20px_60px_rgba(0,0,0,0.2)] backdrop-blur-xl lg:min-w-90">
+            <div className="flex w-full flex-col gap-4 rounded-3xl border border-white/10 bg-black/30 p-5 shadow-[0_20px_60px_rgba(0,0,0,0.2)] backdrop-blur-xl lg:w-[26rem]">
               <div className="flex items-center gap-2 text-sm font-semibold uppercase tracking-[0.3em] text-orange-200">
                 <Clock className="h-4 w-4" />
                 Offer ends in
               </div>
 
-              <div className="flex items-center gap-2 text-white sm:gap-3">
-                <div className="flex min-w-17 flex-col items-center rounded-2xl border border-white/10 bg-white/10 px-3 py-3">
+              <div className="flex flex-wrap items-center justify-center gap-2 text-white sm:gap-3">
+                <div className="flex w-full max-w-[9rem] flex-col items-center rounded-2xl border border-white/10 bg-white/10 px-3 py-3 sm:w-auto sm:flex-none">
                   <motion.span key={isMounted ? 'hours-' + timeLeft.hours : 'hours-placeholder'} variants={timerVariants} initial="initial" animate="animate" className="text-2xl font-semibold text-orange-300 sm:text-3xl">
                     {isMounted ? String(timeLeft.hours).padStart(2, "0") : "00"}
                   </motion.span>
                   <span className="text-[0.65rem] uppercase tracking-[0.25em] text-gray-400">Hours</span>
                 </div>
-                <span className="text-2xl text-gray-500">:</span>
-                <div className="flex min-w-17 flex-col items-center rounded-2xl border border-white/10 bg-white/10 px-3 py-3">
+                <span className="text-2xl text-gray-500 hidden sm:block">:</span>
+                <div className="flex w-full max-w-[9rem] flex-col items-center rounded-2xl border border-white/10 bg-white/10 px-3 py-3 sm:w-auto sm:flex-none">
                   <motion.span key={isMounted ? 'minutes-' + timeLeft.minutes : 'minutes-placeholder'} variants={timerVariants} initial="initial" animate="animate" className="text-2xl font-semibold text-orange-300 sm:text-3xl">
                     {isMounted ? String(timeLeft.minutes).padStart(2, "0") : "00"}
                   </motion.span>
                   <span className="text-[0.65rem] uppercase tracking-[0.25em] text-gray-400">Minutes</span>
                 </div>
-                <span className="text-2xl text-gray-500">:</span>
-                <div className="flex min-w-17 flex-col items-center rounded-2xl border border-white/10 bg-white/10 px-3 py-3">
+                <span className="text-2xl text-gray-500 hidden sm:block">:</span>
+                <div className="flex w-full max-w-[9rem] flex-col items-center rounded-2xl border border-white/10 bg-white/10 px-3 py-3 sm:w-auto sm:flex-none">
                   <motion.span key={isMounted ? 'seconds-' + timeLeft.seconds : 'seconds-placeholder'} variants={timerVariants} initial="initial" animate="animate" className="text-2xl font-semibold text-orange-300 sm:text-3xl">
                     {isMounted ? String(timeLeft.seconds).padStart(2, "0") : "00"}
                   </motion.span>

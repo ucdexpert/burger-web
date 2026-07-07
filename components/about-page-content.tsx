@@ -38,7 +38,7 @@ export const AboutPageContent = () => {
       {/* Stats Section */}
       <section className="py-12">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <div className="grid grid-cols-2 gap-4 sm:grid-cols-4">
+          <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
             {[
               { label: "Signature Burgers", value: "12+" },
               { label: "Guest Rating", value: "4.9/5" },

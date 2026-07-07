@@ -5,7 +5,7 @@ import { ArrowRight, Clock3, MapPin, PhoneCall, Mail, Sparkles, Navigation } fro
 
 export const ContactPageContent = () => {
   return (
-    <section className="relative min-h-[calc(100vh-4.5rem)] bg-[#040404] py-16 sm:py-24">
+    <section className="relative min-h-[calc(100dvh-4.5rem)] bg-[#040404] py-16 sm:py-24">
       {/* Background Ambience */}
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(249,115,22,0.15),transparent_40%),radial-gradient(circle_at_bottom_left,rgba(251,191,36,0.1),transparent_30%)]" />
 
@@ -105,7 +105,7 @@ export const ContactPageContent = () => {
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8 }}
-            className="relative h-[500px] lg:h-full w-full rounded-[3rem] border border-white/10 bg-[#0f0f0f] shadow-2xl overflow-hidden"
+            className="relative h-[28rem] w-full rounded-[3rem] border border-white/10 bg-[#0f0f0f] shadow-2xl overflow-hidden sm:h-[32rem] lg:h-full"
           >
             {/* Map Placeholder Styling */}
             <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1524661135-423995f22d0b?w=1200&auto=format&fit=crop&q=80')] bg-cover bg-center brightness-50" />

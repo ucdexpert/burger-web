@@ -56,7 +56,7 @@ export const MenuCard: React.FC<MenuCardProps> = ({ item, index }) => {
           </div>
         </div>
 
-        <div className="mt-auto flex items-center justify-between border-t border-white/10 pt-4">
+        <div className="mt-auto flex flex-col gap-4 border-t border-white/10 pt-4 sm:flex-row sm:items-center sm:justify-between">
           <div className="flex items-center gap-2 text-sm font-semibold text-yellow-300">
             <Star className="h-4 w-4 fill-yellow-300 text-yellow-300" />
             <span>{item.rating.toFixed(1)}</span>
@@ -66,7 +66,7 @@ export const MenuCard: React.FC<MenuCardProps> = ({ item, index }) => {
             href={`https://wa.me/3170219387?text=I%20want%20to%20order%20the%20${item.name.replace(/ /g, '+')}`}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-1 rounded-full bg-linear-to-r from-orange-500 to-yellow-500 px-4 py-2 text-sm font-semibold text-black transition-all duration-300 hover:scale-[1.02]"
+            className="flex w-full items-center justify-center gap-1 rounded-full bg-linear-to-r from-orange-500 to-yellow-500 px-4 py-2 text-sm font-semibold text-black transition-all duration-300 hover:scale-[1.02] sm:w-auto"
           >
             <Utensils className="w-4 h-4" />
             Order
