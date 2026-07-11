@@ -8,18 +8,27 @@ export const LoadingScreen = () => {
   const [progress, setProgress] = useState(0);
 
   useEffect(() => {
+    const forceHideTimeout = window.setTimeout(() => {
+      setIsVisible(false);
+    }, 4000);
+
     const interval = window.setInterval(() => {
       setProgress((value) => {
-        if (value >= 100) {
+        const nextValue = Math.min(100, value + 8);
+
+        if (nextValue >= 100) {
           window.clearInterval(interval);
           window.setTimeout(() => setIsVisible(false), 280);
-          return 100;
         }
-        return value + 8;
+
+        return nextValue;
       });
     }, 120);
 
-    return () => window.clearInterval(interval);
+    return () => {
+      window.clearInterval(interval);
+      window.clearTimeout(forceHideTimeout);
+    };
   }, []);
 
   return (

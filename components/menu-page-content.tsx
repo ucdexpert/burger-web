@@ -99,7 +99,7 @@ export const MenuPageContent = () => {
               href="https://wa.me/3170219387"
               target="_blank"
               rel="noopener noreferrer"
-              className="rounded-full bg-linear-to-r from-orange-500 to-yellow-500 px-10 py-4 font-semibold text-black transition hover:scale-[1.02]"
+              className="mx-auto inline-flex w-full max-w-[22rem] items-center justify-center rounded-full bg-linear-to-r from-orange-500 to-yellow-500 px-10 py-4 text-center font-semibold text-black transition hover:scale-[1.02] sm:w-auto"
             >
               Reserve Your Table
             </a>

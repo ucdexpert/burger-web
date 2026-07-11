@@ -55,7 +55,7 @@ export const Hero = () => {
         <div className="hero-grid-overlay absolute inset-0 opacity-40" style={{ backgroundImage: "radial-gradient(rgba(255,255,255,0.08) 1px, transparent 1px)", backgroundSize: "24px 24px" }} />
       </div>
 
-      {isMounted && !isMobile && (
+      {isMounted && (
         <div className="hero-particles pointer-events-none absolute inset-0">
           {[...Array(10)].map((_, i) => (
             <Particle key={i} delay={i * 0.3} />
@@ -64,15 +64,15 @@ export const Hero = () => {
       )}
 
       <div className="relative z-10 mx-auto w-full max-w-7xl px-6 py-6 sm:px-8 sm:py-8 lg:px-8 lg:py-10">
-        <div className="grid items-center gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:gap-16">
+        <div className="flex flex-col lg:flex-row items-center gap-10 lg:gap-16">
           <motion.div
             initial={{ opacity: 0, x: -40 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
-            className="max-w-2xl text-center lg:text-left"
+            className="w-full lg:w-[45%] text-center lg:text-left"
           >
             <motion.p
-              className="mb-6 inline-flex rounded-full border border-orange-400/20 bg-white/10 px-4 py-2 text-[0.7rem] font-semibold uppercase tracking-[0.35em] text-orange-300 backdrop-blur-md"
+              className="mb-6 inline-flex max-w-full flex-wrap items-center justify-center whitespace-normal rounded-full border border-orange-400/20 bg-white/10 px-4 py-2 text-[0.6rem] sm:text-[0.7rem] font-semibold uppercase tracking-[0.35em] text-orange-300 backdrop-blur-md"
               initial={{ opacity: 0, y: 14 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.15 }}
@@ -131,9 +131,9 @@ export const Hero = () => {
             initial={{ opacity: 0, x: 40 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.9, ease: "easeOut", delay: 0.2 }}
-            className="relative flex items-center justify-center lg:justify-end"
+            className="relative w-full lg:w-[55%] flex items-center justify-center lg:justify-end"
           >
-            <div className="hero-panel relative h-[22rem] w-full max-w-[40rem] rounded-[2.5rem] border border-white/[0.06] bg-linear-to-br from-orange-500/[0.06] via-transparent to-yellow-500/[0.04] p-3 shadow-[0_14px_40px_rgba(0,0,0,0.2)] backdrop-blur-2xl sm:h-[25rem] md:max-w-145 md:h-[28rem] lg:h-[34rem] lg:w-160">
+            <div className="hero-panel relative h-[22rem] w-full rounded-[2.5rem] border border-white/[0.06] bg-linear-to-br from-orange-500/[0.06] via-transparent to-yellow-500/[0.04] p-3 shadow-[0_14px_40px_rgba(0,0,0,0.2)] backdrop-blur-2xl sm:h-[25rem] lg:h-[34rem]">
               <div className="absolute inset-0 rounded-[2.5rem] bg-[radial-gradient(circle_at_top,rgba(255,255,255,0.08),transparent_65%)]" />
               <div className="absolute inset-3 rounded-[1.75rem] border border-white/[0.03] bg-transparent" />
               <div className="relative z-10 h-full w-full overflow-hidden rounded-[1.75rem]">
